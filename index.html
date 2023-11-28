@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="list.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h1>Add Items To Buy</h1>
+
+        <input type="text" name="" id="textbox">
+
+        <button id="btn" onclick="add()">Add</button>
+        <button id="btn2" onclick="removebtn()">Remove</button>
+
+        <ul id="list">
+            <!-- <li>Itel</li>
+            <li>Tecno</li>
+            <li>Rice</li> -->
+        </ul>
+
+    </div>
+
+    <script>
+        const textbox= document.getElementById('textbox');
+        const btn= document.getElementById('btn');
+        const list= document.getElementById('list');
+        const btn2= document.getElementById('btn2');
+
+        function add(){
+            let li=document.createElement('li');
+            li.innerText=textbox.value;
+            list.append(li);
+            textbox.value = null;
+        }
+
+
+    </script>
+    
+</body>
+</html>
